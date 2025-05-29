@@ -3,7 +3,7 @@ package com.ps;
 import java.util.Scanner;
 
 public class UserInterface {
-    private Scanner scanner = new Scanner();
+    private Scanner scanner = new Scanner(System.in);
     private Order order;
 
     public void init() {

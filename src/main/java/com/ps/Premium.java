@@ -1,4 +1,11 @@
 package com.ps;
 
-public class Premium {
+public abstract class Premium extends Topping {
+    protected Premium(String name) {
+        super(name);
+    }
+    @Override
+    public boolean isPremium() {
+        return true;
+    }
 }

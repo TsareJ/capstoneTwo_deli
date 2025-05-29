@@ -1,4 +1,14 @@
 package com.ps;
 
-public class Topping {
+public abstract class Topping {
+    protected String name;
+
+    public Topping(String name) {
+        this.name;
+    }
+    public String getName() {
+        return name;
+    }
+    public abstract boolean isPremium();
+    public abstract double getPrice(SandwichSize size, boolean isExtra);
 }
