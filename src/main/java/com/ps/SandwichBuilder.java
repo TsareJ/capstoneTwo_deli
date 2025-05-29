@@ -133,7 +133,6 @@ public class SandwichBuilder {
             try {
                 int index = Integer.parseInt(input) - 1;
                 if (index >= 0 && index < toppings.size()) {
-                    boolean extra = askExtra(scanner, toppings.get(index));
                     sandwich.addTopping(new Regular(toppings.get(index)), false);
                 } else {
                     System.out.println("Invalid choice");
@@ -141,24 +140,22 @@ public class SandwichBuilder {
             } catch (NumberFormatException e) {
                 System.out.println("Please enter a number.");
             }
-
         }
     }
     private static void addSauces(Scanner scanner, Sandwich sandwich) {
-        List<String> toppings = List.of("Mayo", "Peppers", "Onions", "Tomatoes", "Jalapenos", "Cucumbers", "Pickles", "Guacamole", "Mushrooms");
-        System.out.println("Please select your standard toppings (Input 0 to finish):");
-        for (int i = 0; i < toppings.size(); i++) {
-            System.out.printf("%d) %s%n", i + 1, toppings.get(i));
+        List<String> sauces = List.of("Mayo", "Mustard", "Ketchup", "Ranch", "Pepper Sauce");
+        System.out.println("Please select your standard sauces (Input 0 to finish):");
+        for (int i = 0; i < sauces.size(); i++) {
+            System.out.printf("%d) %s%n", i + 1, sauces.get(i));
         }
         while (true) {
-            System.out.print("What's your choice of toppings: ");
+            System.out.print("What's your choice of sauces: ");
             String input = scanner.nextLine();
             if (input.equals("0")) break;
             try {
                 int index = Integer.parseInt(input) - 1;
-                if (index >= 0 && index < toppings.size()) {
-                    boolean extra = askExtra(scanner, toppings.get(index));
-                    sandwich.addTopping(new Regular(toppings.get(index)), false);
+                if (index >= 0 && index < sauces.size()) {
+                    sandwich.addTopping(new Regular(sauces.get(index)), false);
                 } else {
                     System.out.println("Invalid choice");
                 }
@@ -166,5 +163,9 @@ public class SandwichBuilder {
                 System.out.println("Please enter a number.");
             }
         }
+    }
+    private static boolean askExtra(Scanner scanner, String name) {
+        System.out.printf("Extra %s? (y/n): ",name);
+        return scanner.nextLine().equalsIgnoreCase("y");
     }
 }

@@ -25,9 +25,9 @@ public class Sandwich implements Product {
     @Override
     public double calcPrice() {
         double price = switch (size) {
-            case Four_Inch -> 5.50;
-            case Eight_Inch -> 7.00;
-            case Twelve_Inch -> 8.50;
+            case FOUR_INCH -> 5.50;
+            case EIGHT_INCH -> 7.00;
+            case TWELVE_INCH -> 8.50;
         };
         for (Topping topping : toppings) {
             price += topping.getPrice(size, extras.get(topping));
