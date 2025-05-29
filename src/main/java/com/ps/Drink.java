@@ -20,6 +20,6 @@ public class Drink implements Product{
 
     @Override
     public String toString() {
-        return size + " " + flavor
+        return size + " " + flavor + "Drink ($" + calcPrice() + ")";
     }
 }
