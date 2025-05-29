@@ -15,7 +15,6 @@ public class UserInterface {
                 case "2" -> running = false;
                 default -> System.out.println("Please select a valid choice.");
             }
-
         }
     }
 
@@ -33,7 +32,5 @@ public class UserInterface {
         if (scanner.nextLine().equalsIgnoreCase("y")) {
             FileManager.writeReceipt(order);
         }
-
     }
-
 }
