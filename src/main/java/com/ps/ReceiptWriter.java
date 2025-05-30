@@ -12,7 +12,7 @@ public class ReceiptWriter {
             Path folder = Paths.get("receipts");
             Files.createDirectories(folder);
 
-            String filename = order.orderTime.format(DateTimeFormatter.ofPattern("yyyyMMdd-HHmmss")) +".txt";
+            String filename = order.orderTime.format(DateTimeFormatter.ofPattern("yyyy/MM/dd ~ HH:mm:ss")) +".txt";
             Files.writeString(folder.resolve(filename), order.toString());
             System.out.println("Receipt saved: " + filename);
         } catch (IOException e) {
