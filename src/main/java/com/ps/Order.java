@@ -23,4 +23,8 @@ public class Order {
         }
         return stringBuilder.toString();
     }
+
+    public List<Product> getProducts() {
+        return products;
+    }
 }
