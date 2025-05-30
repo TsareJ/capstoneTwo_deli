@@ -1,0 +1,29 @@
+~~~~~ Order Summary ~~~~~
+EIGHT_INCH Wheat sandwich (Toasted)
+Toppings:
+ - Fried Chicken (Extra)
+ - Turkey Bacon
+ - Pepper Jack
+ - Lettuce
+ - Guacamole
+ - Mushrooms
+ - Ketchup
+Price: $11.50
+
+Total: $30.75
+Medium Lemonade Drink ($2.5)
+
+Total: $30.75
+Honey BBQ Chips ($1.50)
+
+Total: $30.75
+TWELVE_INCH White sandwich
+Toppings:
+ - Jerk Fish
+ - Jerk Fish (Extra)
+ - Pepper Jack
+ - Guacamole
+ - Ranch
+Price: $15.25
+
+Total: $30.75

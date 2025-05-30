@@ -63,6 +63,32 @@ public class UserInterface {
                     }
                     ordering = false;
                 }
+                case "5" -> {
+                    if (order.getProducts().isEmpty()) {
+                        System.out.println("❌Your order is empty. There's nothing to remove.");
+                        break;
+                    }
+                    System.out.println("\n Select an item to remove:");
+                    int i = 1;
+                    for (Product product : order.getProducts()) {
+                        System.out.println(i++ + ") " + product.toString().split("\n")[0]);
+                    }
+
+                    System.out.println("Enter item number to remove (or 0 to cancel): ");
+                    try {
+                        int select = Integer.parseInt(scanner.nextLine());
+                        if (select == 0) {
+                            System.out.println("Removal has been cancelled.");
+                        } else if (select >= 1 && select <= order.getProducts().size()) {
+                            Product removed = order.getProducts().remove(select - 1);
+                            System.out.println("✅Removed: " + removed.toString().split("\n")[0]);
+                        } else {
+                            System.out.println("Invalid selection");
+                        }
+                    } catch (NumberFormatException e) {
+                        System.out.println("Invalid selection. Please enter a valid input.");
+                    }
+                }
                 case "0" -> {
                     System.out.println("❌Order cancelled.");
                     ordering = false;
@@ -91,6 +117,7 @@ public class UserInterface {
         System.out.println("2) Add Drink");
         System.out.println("3) Add Chips");
         System.out.println("4) Checkout");
+        System.out.println("5) Remove an Item");
         System.out.println("0) Cancel Order");
         System.out.print("Please select an option: ");
     }
