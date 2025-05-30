@@ -1,0 +1,17 @@
+~~~~~ Order Summary ~~~~~
+TWELVE_INCH Rye sandwich (Toasted)
+Toppings:
+ - Turkey (Extra)
+ - Fried Chicken
+ - Pepper Jack
+ - Guacamole
+ - Ranch
+Price: $15.25
+
+Total: $19.75
+Large ColaDrink ($3.0)
+
+Total: $19.75
+Goldfish Chips ($1.50)
+
+Total: $19.75

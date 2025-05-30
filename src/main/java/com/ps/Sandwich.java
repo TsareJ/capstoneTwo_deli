@@ -9,7 +9,7 @@ public class Sandwich implements Product {
     private SandwichSize size;
     private BreadType breadType;
     private boolean toasted;
-    private List<Topping> topping = new ArrayList<>();
+    private List<Topping> toppings = new ArrayList<>();
     private Map<Topping, Boolean> extras = new HashMap<>();
 
     public Sandwich(SandwichSize size, BreadType breadType, boolean toasted) {

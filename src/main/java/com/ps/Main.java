@@ -1,7 +1,9 @@
 package com.ps;
 
 public class Main {
-    UserInterface userInterface = new UserInterface();
-    
+    public static void main(String[] args) {
+        UserInterface userInterface = new UserInterface();
+        userInterface.init();
+    }
 }
 

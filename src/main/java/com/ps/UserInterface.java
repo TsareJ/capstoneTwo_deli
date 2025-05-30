@@ -30,7 +30,7 @@ public class UserInterface {
         boolean ordering = true;
 
         while (ordering) {
-            displayMainMenu();
+            displayOrderMenu();
             String input = scanner.nextLine();
 
             switch (input) {
